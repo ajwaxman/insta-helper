@@ -2,12 +2,9 @@ $(function() {
 
 
   var followUser = function() {
-    console.log("Whazzup")
 
     $btn = $(this);
     var id = $btn.data('id')
-    console.log($btn);
-    console.log(id);
 
     $.ajax({
         type: 'POST',

@@ -7,7 +7,6 @@ class PhotosController < ApplicationController
 
   def follow_user
     id = params[:id]
-    puts id
     Instagram.client(:access_token => session[:access_token]).follow_user(id)    
 
     respond_to do |format|
