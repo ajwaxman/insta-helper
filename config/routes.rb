@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   resources :photos
+  post 'photos/follow_user' => 'photos#follow_user'
 
   get "/auth/:provider/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout
